@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #03040a;
+  --color-bg-2: #070b14;
+  --color-accent: #7cffcb;
+  --color-accent-2: #6ea8ff;
+  --color-text: #f5f7ff;
+  --color-muted: #8c96aa;
+  --color-border: rgba(245, 247, 255, 0.1);
+  --color-glass: rgba(245, 247, 255, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-bg);
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Lenis এর জন্য দরকারি CSS (Step 6 এ কাজে লাগবে) */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
